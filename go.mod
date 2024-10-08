@@ -1,3 +1,3 @@
-module github.com/gptscript-ai/chat-completion-client
+module github.com/sanjay920/chat-completion-client
 
 go 1.22.2
