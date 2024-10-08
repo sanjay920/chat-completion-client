@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"net/http"
 )
 
@@ -337,6 +338,10 @@ func (c *Client) CreateChatCompletion(
 
 	// Always set Store to true
 	request.Store = true
+
+	// Print the ChatCompletionRequest
+	requestJSON, _ := json.MarshalIndent(request, "", "  ")
+	fmt.Printf("ChatCompletionRequest:\n%s\n", string(requestJSON))
 
 	urlSuffix := chatCompletionsSuffix
 
